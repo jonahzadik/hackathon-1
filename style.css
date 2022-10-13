@@ -1,0 +1,51 @@
+h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-align: center;
+  color: white;
+  text-shadow: 9px 9px 10px rgba(0, 0, 0, 0.15),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+body {
+  background-color: #5c8dff;
+}
+
+#cityInput {
+  width: 500px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 35px;
+  background: rgba(239, 239, 239, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#image1 {
+  position: relative;
+  left: 335px;
+  top: 85px;
+}
+
+#image2 {
+  position: relative;
+  left: 920px;
+  top: 130px;
+}
+
+#developedby {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  position: relative;
+  top: 230px;
+}
+
+#container {
+  width: 100vw;
+}
