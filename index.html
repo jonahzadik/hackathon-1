@@ -38,6 +38,7 @@
       <h1 id="h1title"></h1>
       <div class="parent">
         <div class="div1" id="dashbox">
+          <h1 id="temph1">Temperature</h1>
           <div class="nestediv1">
             <img id="weatherimg" src="" alt="" />
             <p id="weatherp"></p>
@@ -60,9 +61,35 @@
             <i></i>
           </label>
           <label for="switch" id="degrees">F&#xb0;</label>
+          <button id="submitbutton2" onclick="doRefresh()">
+            Go Home
+            <img
+              src="./589-5898244_icon-white-house-home-icon-white-png-transparent.png"
+              style="width: 20px"
+            />
+          </button>
         </div>
-        <div class="div4" id="dashbox"></div>
-        <div class="div5" id="dashbox"></div>
+        <div class="div4" id="dashbox">
+          <h1 id="windh1">Wind</h1>
+          <div class="windiv">
+            <div class="windnestediv1">
+              <h1 id="windspeedh1"></h1>
+            </div>
+            <div class="windnestediv2">
+              <h1 id="winddegh1">1</h1>
+            </div>
+            <div class="windnestediv3">
+              <p id="windsmallertext"></p>
+            </div>
+            <div class="windnestediv4">
+              <p id="windsmallertext">Meteorological Degrees</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div5" id="dashbox">
+          <h1 id="sunh1">Sunrise / Sunset</h1>
+        </div>
       </div>
     </div>
     <script src="./script.js"></script>

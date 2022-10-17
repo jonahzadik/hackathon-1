@@ -11,7 +11,8 @@ function clearContent() {
 }
 
 function uppercaseLetters(word) {
-  const str = word;
+  const string = word;
+  const str = string.toLowerCase();
 
   const arr = str.split(" ");
   for (var i = 0; i < arr.length; i++) {
@@ -32,10 +33,6 @@ function loaded() {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.main.temp);
-      console.log(data.main.humidity);
-      console.log(data.wind.speed);
-      console.log(data.weather[0].description);
       document.getElementById("h1title").textContent =
         "Weather for " + uppercaseLetters(city.value) + ", " + data.sys.country;
       document.getElementById("loader").style.display = "none";
@@ -47,13 +44,28 @@ function loaded() {
       document.getElementById("humiditytext").textContent =
         "The Humidity is making it feel like " +
         Math.floor(data.main.feels_like) +
-        "\u00B0";
+        "\u00B0.";
       let weatherimg =
         "http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
       document.getElementById("weatherp").textContent = uppercaseLetters(
         data.weather[0].description
       );
       document.getElementById("weatherimg").src = weatherimg;
+
+      if (units === "metric") {
+        console.log("Meters per second");
+        document.getElementById("windspeedh1").textContent =
+          Math.round(data.wind.speed * 10) / 10;
+        document.getElementById("windsmallertext").textContent =
+          "Meters per Second";
+      } else {
+        console.log("Miles per");
+        document.getElementById("windspeedh1").textContent =
+          Math.round(data.wind.speed * 10) / 10;
+        document.getElementById("windsmallertext").textContent =
+          "Miles per Hour";
+      }
+      document.getElementById("winddegh1").textContent = data.wind.deg;
     })
 
     .catch((err) => location.reload());
@@ -69,4 +81,8 @@ function isclicked() {
     units = "imperial";
     loaded();
   }
+}
+
+function doRefresh() {
+  location.reload();
 }
