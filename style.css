@@ -152,8 +152,6 @@ button:hover::before {
 #dashboardcontainer {
   display: none;
 }
-<<<<<<< HEAD
-=======
 
 .parent {
   padding: 20px;
@@ -373,4 +371,3 @@ button:hover::before {
   height: 250px;
   margin-top: 10px;
 }
->>>>>>> e47bbde13ef01ed2e190f9298c701fa19e9bbbed
