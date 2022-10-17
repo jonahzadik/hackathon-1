@@ -10,8 +10,6 @@ function clearContent() {
   setTimeout(loaded, 2000);
 }
 
-let hi = hi;
-
 function uppercaseLetters(word) {
   const str = word;
 
