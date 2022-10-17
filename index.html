@@ -9,19 +9,62 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="./style.css" />
+    <script type="text/javascript" src="script.js"></script>
   </head>
-  <body>
-    <h1>Find your weather</h1>
-    <div id="container">
-      <div id="image1"><img src="./clouds.png" /></div>
-      <div id="image2"><img src="./suncloud.png" /></div>
-      <div id="cityInput"></div>
+  <body id="body">
+    <div class="loader" id="loader"></div>
+    <div id="searchcontainer">
+      <h1>Find your weather</h1>
+
+      <div id="contentOutter">
+        <div id="cityInput">
+          <p id="entercity">Please enter a city</p>
+          <form id="form">
+            <input type="text" id="inputfield1" placeholder="Ex: Toronto" />
+            <button id="submitbutton" onclick="clearContent();">Submit</button>
+          </form>
+          <img id="image1" src="./clouds.png" />
+          <img id="image2" src="./suncloud.png" />
+        </div>
+      </div>
+      <h3 id="developedby">Developed by Jonah Zadik</h3>
     </div>
-    <h3 id="developedby">Developed by Jonah Zadik</h3>
+    <div id="dashboardcontainer">
+      <h1 id="h1title"></h1>
+      <div class="parent">
+        <div class="div1" id="dashbox">
+          <div class="nestediv1">
+            <img id="weatherimg" src="" alt="" />
+            <p id="weatherp"></p>
+          </div>
+          <div class="nestediv2">
+            <h1 id="weatherh1"></h1>
+          </div>
+        </div>
+        <div class="div2" id="dashbox">
+          <h1 id="humidityh1">Humidity</h1>
+          <h1 id="humiditypercent"></h1>
+          <p id="humiditytext"></p>
+        </div>
+        <div class="div3" id="dashbox">
+          <p id="settings">Settings</p>
+          <p id="settingsunits">Units</p>
+          <label for="switch" id="degrees">C&#xb0;</label>
+          <label class="form-switch">
+            <input type="checkbox" id="toggle" onclick="isclicked()" />
+            <i></i>
+          </label>
+          <label for="switch" id="degrees">F&#xb0;</label>
+        </div>
+        <div class="div4" id="dashbox"></div>
+        <div class="div5" id="dashbox"></div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
   </body>
 </html>
