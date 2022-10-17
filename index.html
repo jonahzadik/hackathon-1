@@ -36,6 +36,34 @@
     </div>
     <div id="dashboardcontainer">
       <h1 id="h1title"></h1>
+      <div class="parent">
+        <div class="div1" id="dashbox">
+          <div class="nestediv1">
+            <img id="weatherimg" src="" alt="" />
+            <p id="weatherp"></p>
+          </div>
+          <div class="nestediv2">
+            <h1 id="weatherh1"></h1>
+          </div>
+        </div>
+        <div class="div2" id="dashbox">
+          <h1 id="humidityh1">Humidity</h1>
+          <h1 id="humiditypercent"></h1>
+          <p id="humiditytext"></p>
+        </div>
+        <div class="div3" id="dashbox">
+          <p id="settings">Settings</p>
+          <p id="settingsunits">Units</p>
+          <label for="switch" id="degrees">C&#xb0;</label>
+          <label class="form-switch">
+            <input type="checkbox" id="toggle" onclick="isclicked()" />
+            <i></i>
+          </label>
+          <label for="switch" id="degrees">F&#xb0;</label>
+        </div>
+        <div class="div4" id="dashbox"></div>
+        <div class="div5" id="dashbox"></div>
+      </div>
     </div>
     <script src="./script.js"></script>
   </body>
