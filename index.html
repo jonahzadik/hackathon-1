@@ -38,6 +38,7 @@
       <h1 id="h1title"></h1>
       <div class="parent">
         <div class="div1" id="dashbox">
+          <h1 id="temph1">Temperature</h1>
           <div class="nestediv1">
             <img id="weatherimg" src="" alt="" />
             <p id="weatherp"></p>
@@ -54,15 +55,66 @@
         <div class="div3" id="dashbox">
           <p id="settings">Settings</p>
           <p id="settingsunits">Units</p>
-          <label for="switch" id="degrees">C&#xb0;</label>
+          <label for="switch" id="degrees">Metric (C&#xb0;)</label>
           <label class="form-switch">
             <input type="checkbox" id="toggle" onclick="isclicked()" />
             <i></i>
           </label>
-          <label for="switch" id="degrees">F&#xb0;</label>
+          <label for="switch" id="degrees">Imperial (F&#xb0;)</label>
+          <button id="submitbutton2" onclick="doRefresh()">
+            Go Home
+            <img
+              src="./589-5898244_icon-white-house-home-icon-white-png-transparent.png"
+              style="width: 20px"
+            />
+          </button>
+          <p id="findtheproject">Find the source code on Github!</p>
+          <button
+            id="githubbutton"
+            onclick="window.open(
+              'https://github.com/jonahzadik/hackathon-1',
+              '_blank'
+            );"
+          >
+            Click me!
+            <img src="./github.png" style="width: 20px" />
+          </button>
         </div>
-        <div class="div4" id="dashbox"></div>
-        <div class="div5" id="dashbox"></div>
+        <div class="div4" id="dashbox">
+          <h1 id="windh1">Wind</h1>
+          <div class="windiv">
+            <div class="windnestediv1">
+              <h1 id="windspeedh1"></h1>
+            </div>
+            <div class="windnestediv2">
+              <h1 id="winddegh1">1</h1>
+            </div>
+            <div class="windnestediv3">
+              <p id="windsmallertext"></p>
+            </div>
+            <div class="windnestediv4">
+              <p id="windsmallertext">Meteorological Degrees</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="div5" id="dashbox">
+          <h1 id="sunh1">Sunrise / Sunset</h1>
+          <div class="sunnestediv1">
+            <img id="sunsimg" src="./sunrise.png" />
+            <p id="suntext1">Test</p>
+          </div>
+          <div class="sunnestediv2">
+            <img id="sunsimg" src="./sunset.png" />
+            <p id="suntext2">Test</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="errorouter">
+      <div id="popup">
+        <p id="entercity">Invalid City, Please try again.</p>
+        <button id="popupok" onclick="location.reload();">Home</button>
       </div>
     </div>
     <script src="./script.js"></script>
