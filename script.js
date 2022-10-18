@@ -5,7 +5,6 @@ body = document.getElementById("body");
 
 function clearContent() {
   document.getElementById("searchcontainer").innerHTML = "";
-  console.log(city.value);
   document.getElementById("loader").style.display = "block";
   setTimeout(loaded, 2000);
 }
@@ -53,13 +52,11 @@ function loaded() {
       document.getElementById("weatherimg").src = weatherimg;
 
       if (units === "metric") {
-        console.log("Meters per second");
         document.getElementById("windspeedh1").textContent =
           Math.round(data.wind.speed * 10) / 10;
         document.getElementById("windsmallertext").textContent =
           "Meters per Second";
       } else {
-        console.log("Miles per");
         document.getElementById("windspeedh1").textContent =
           Math.round(data.wind.speed * 10) / 10;
         document.getElementById("windsmallertext").textContent =
