@@ -66,9 +66,19 @@ function loaded() {
           "Miles per Hour";
       }
       document.getElementById("winddegh1").textContent = data.wind.deg;
+      document.getElementById("suntext1").textContent = epochToJSDate(
+        data.sys.sunrise
+      );
+      document.getElementById("suntext2").textContent = epochToJSDate(
+        data.sys.sunset
+      );
+      let backgroundpick = document.getElementById("backgroundpicker").value;
+      document.getElementById("body").style.backgroundColor = backgroundpick;
     })
 
-    .catch((err) => location.reload());
+    .catch((err) => {
+      invalidCity();
+    });
 }
 
 function isclicked() {
@@ -85,4 +95,16 @@ function isclicked() {
 
 function doRefresh() {
   location.reload();
+}
+
+function epochToJSDate(ts) {
+  const currentDate = new Date(ts * 1000);
+  let str3 = currentDate.toTimeString();
+  let splitStr = str3.split(" ");
+  return splitStr[0] + " " + splitStr[1];
+}
+
+function invalidCity() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("popup").style.display = "block";
 }
